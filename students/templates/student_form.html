@@ -1,0 +1,13 @@
+{% extends 'base.html' %}  {# You can extend a base template if you have one. #}
+
+{% block content %}
+  <h1>{% if student.id %}Edit Student{% else %}Create Student{% endif %}</h1>
+
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a href="{% url 'student_list' %}" class="btn btn-secondary">Cancel</a>
+  </form>
+{% endblock %}

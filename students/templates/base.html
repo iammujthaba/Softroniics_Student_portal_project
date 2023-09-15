@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Student Portal{% endblock %}</title>
+
+    <link href="/static/css/styles.css" rel="stylesheet">
+    <link href="/static/css/forms.css" rel="stylesheet">
+    <link href="/static/css/delete_confirmation.css" rel="stylesheet">
+    <link href="/static/css/base.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>{% block header %}Student Portal{% endblock %}</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </main>
+
+</body>
+</html>
